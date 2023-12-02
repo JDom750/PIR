@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Planta Piloto - Formulario 2</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+
+      form {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      fieldset {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 20px;
+      }
+
+      legend {
+        padding: 5px 10px;
+        background-color: #333;
+        color: #fff;
+        border-radius: 4px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Planta Piloto - Formulario 2</h1>
+    </header>
+    <form action="guardar_en_bd.php" method="post">
+      <fieldset>
+        <legend>Control de Calidad</legend>
+        <ul>
+          <li>
+            <label for="ph">PH:</label>
+            <input type="text" id="ph" name="ph" />
+          </li>
+          <li>
+            <label for="temp_min">Temperatura Mínima:</label>
+            <input type="text" id="temp_min" name="temp_min" />
+          </li>
+          <li>
+            <label for="temp_max">Temperatura Máxima:</label>
+            <input type="text" id="temp_max" name="temp_max" />
+          </li>
+        </ul>
+      </fieldset>
+      <button type="submit">Guardar en la Base de Datos</button>
+    </form>
+
+    <!-- Button to go back to the previous page (yyy.html) -->
+    <button onclick="goToPreviousPage()">Volver</button>
+
+    <script>
+      function goToPreviousPage() {
+        window.location.href = 'yyy.html';
+      }
+    </script>
+  </body>
+</html>
+"/guardar-en-bd"

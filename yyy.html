@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Planta Piloto - Formulario 1</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+
+      form {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      fieldset {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 20px;
+      }
+
+      legend {
+        padding: 5px 10px;
+        background-color: #333;
+        color: #fff;
+        border-radius: 4px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+
+      /* Agregamos estilo al campo activo */
+      input:focus,
+      select:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Planta Piloto - Formulario 1</h1>
+    </header>
+    <form action="procesar_formulario.php" method="post">
+      <fieldset>
+        <legend>Datos del Producto</legend>
+        <ul>
+          <li>
+            <label for="Producto">Producto:</label>
+            <input list="prods" id="Producto" name="Productos" required />
+            <datalist id="prods">
+              <option value="Queso Cuartirolo"></option>
+              <option value="Queso Gouda"></option>
+              <option value="Queso Reggianito"></option>
+              <option value="Queso Sardo"></option>
+              <option value="Provoleta"></option>
+              <option value="Ricotta"></option>
+              <option value="Burrata"></option>
+            </datalist>
+          </li>
+          <li>
+            <label for="Fecha">Fecha:</label>
+            <input type="date" id="Fecha" name="Fecha_elaboracion" value="" required />
+            <script>
+              document.getElementById('Fecha').valueAsDate = new Date();
+            </script>
+          </li>
+          <li>
+            <label for="Responsable">Responsable:</label>
+            <input list="resp" id="Responsable" name="Responsable" required />
+            <datalist id="resp">
+              <option value="Jose"></option>
+              <option value="Tito"></option>
+              <option value="abcds"></option>
+            </datalist>
+          </li>
+        </ul>
+      </fieldset>
+      <button type="submit">Siguiente</button>
+    </form>
+  </body>
+</html>
+
